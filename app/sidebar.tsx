@@ -1,9 +1,9 @@
-// app/Sidebar.tsx
-"use client"; // Add this directive to specify that this is a client-side component
+
+"use client";
 
 import { useEffect, useState } from "react";
 import "./app.css";
-import { sidebarData } from "./sidebardata"; // Import sidebar data
+import { sidebarData } from "./sidebardata";
 
 export default function Sidebar() {
   const [currentPath, setCurrentPath] = useState<string>("");
@@ -13,14 +13,14 @@ export default function Sidebar() {
   }, []);
 
   const handleNavigation = (path: string) => {
-    window.location.href = path; // Forces a full page reload
+    window.location.href = path;
   };
 
   return (
     <div className="sidebar">
-        <p className="headi">Pratyush's Portfolio</p>
-        <div className="divider"></div>
-        
+      <p className="headi">Pratyush's Portfolio</p>
+      <div className="divider"></div>
+
       <ul className="sidebarlist">
         {sidebarData.map((val, key) => (
           <li

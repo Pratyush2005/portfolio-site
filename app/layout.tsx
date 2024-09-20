@@ -1,6 +1,6 @@
-// app/layout.tsx
+
 import "./app.css";
-import Sidebar from "./sidebar"; // Import Sidebar component
+import Sidebar from "./sidebar";
 
 export const metadata = {
   title: 'Next.js',
@@ -18,7 +18,7 @@ export default function RootLayout({
         <div className="App">
           {/* Sidebar always visible */}
           <Sidebar />
-          
+
           {/* Main content with margin to prevent overlap with Sidebar */}
           <main style={{ marginLeft: '240px', padding: '20px' }}>
             {children}
